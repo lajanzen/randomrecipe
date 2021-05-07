@@ -1,0 +1,11 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #cbf3f0;
+  --primary-color: #2ec4b6;
+  --secondary-color: #ffbf69;
+}
