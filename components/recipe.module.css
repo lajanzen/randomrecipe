@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #fff;
+  --primary-color: #e5e5e5;
+  --secondary-color: #fca311;
+  --tercary-color: #14213d;
+}
+
+.recipe a {
+  text-decoration: none;
+  color: var(--tercary-color);
+}
+
+.recipe {
+  margin-top: 2em;
+  background-color: var(--secondary-color);
+  border-radius: 1em;
+  display: grid;
+  grid-template-rows: 20% 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+
+.recipeImage {
+  border-radius: 1em;
+  height: 170px;
+  justify-self: center;
+}
