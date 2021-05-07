@@ -8,33 +8,37 @@ const recipeSection = createElement("section", {
 });
 
 const mainElement = createElement("main", {
-  innerText: "blabla",
   children: [
     createElement("header", {
       className: "hero",
       children: [
         createElement("h1", {
           className: "hero__title",
-          innerText: "What the heck will I cook today",
+          innerText: "What the heck will I cook today?!",
         }),
-        createElement("input", {
-          className: "input",
-          placeholder: "Search recipe",
-          autofocus: true,
-          // Hier holen wir uns die API gefiltert nach dem Input-Wert:
-          oninput: (event) => {
-            // event ist das "Eintippen" im Input-Feld
+        createElement("button", {
+          className: "hero__button",
+          innerText: "INSPIRE ME!",
+          onclick: () => {
             removeAllChildren(recipeSection); //löscht alle vorherigen Suchergebnisse
+            getRecipes("chicken").then((recipes) => {
+              // greift auf Recipe API zu
 
-            const search = event.target.value; // greift auf das entsprechende Input-Element zu (was man eingibt)
-            getRecipes(search).then((recipes) => {
-              //Fetch Funkion greift auf API zu
-              const recipeElements = recipes.map(createRecipeElement); // Erstelle neue array mit Character-Elementen
-              recipeSection.append(...recipeElements); // Fügt es der Character-Section hinzu
+              const shuffledRecipes = recipes
+                .sort(() => Math.random() - Math.random()) //mischt die Reihenfolge des Arrays
+                .slice(0, 3); // nimmt die ersten 3 Elemente des gemischten Arrays
+
+              const recipeElements = shuffledRecipes.map(createRecipeElement); // Funktion zum Erstellen der Recipe Elemente
+              recipeSection.append(...recipeElements); // Hängt die Elemente an die Section an
             });
           },
         }),
       ],
+    }),
+
+    createElement("h2", {
+      className: "main__h2",
+      innerText: "You'll cook:",
     }),
 
     recipeSection,
@@ -44,7 +48,9 @@ const mainElement = createElement("main", {
       children: [
         createElement("small", {
           className: "footer__trademark",
-          children: [createElement("span", { innerText: "Have fun cooking" })],
+          children: [
+            createElement("span", { innerText: "Have fun cooking ♥" }),
+          ],
         }),
       ],
     }),

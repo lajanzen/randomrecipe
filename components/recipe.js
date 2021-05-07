@@ -11,26 +11,27 @@ export function createRecipeElement({
   strIngredient2,
   strIngredient3,
 }) {
-  return createElement("div", {
+  return createElement("section", {
     className: styles.recipe,
     children: [
+      createElement("a", {
+        href: `/details.html?id=${idMeal}`,
+        children: [
+          createElement("h2", {
+            innerText: strMeal,
+          }),
+        ],
+      }),
       createElement("img", {
         src: strMealThumb,
         className: styles.recipeImage,
       }),
+
       createElement("section", {
         className: styles.recipeInfo,
         children: [
-          createElement("a", {
-            href: `/details.html?id=${idMeal}`,
-            children: [
-              createElement("h2", {
-                innerText: strMeal,
-              }),
-            ],
-          }),
-          createElement("p", { innerText: strCategory }),
-          createElement("p", { innerText: strArea }),
+          createElement("p", { innerText: `Category: ${strCategory}` }),
+          createElement("p", { innerText: `Origin: ${strArea}` }),
           createElement("p", {
             innerText: `with ${strIngredient1}, ${strIngredient2} and ${strIngredient3}`,
           }),
