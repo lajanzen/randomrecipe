@@ -62,8 +62,9 @@ body {
 }
 
 .footer {
-  position: static;
+  position: fixed;
   bottom: 0;
+  width: 90%;
   background-color: var(--primary-color);
   border-radius: 50px;
   padding: 1em;
