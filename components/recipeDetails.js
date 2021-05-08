@@ -15,12 +15,6 @@ export function createRecipeDetails({
   strMeasure7,
   strMeasure8,
   strMeasure9,
-  strMeasure10,
-  strMeasure11,
-  strMeasure12,
-  strMeasure13,
-  strMeasure14,
-  strMeasure15,
   strIngredient1,
   strIngredient2,
   strIngredient3,
@@ -30,23 +24,14 @@ export function createRecipeDetails({
   strIngredient7,
   strIngredient8,
   strIngredient9,
-  strIngredient10,
-  strIngredient11,
-  strIngredient12,
-  strIngredient13,
-  strIngredient14,
-  strIngredient15,
   strInstructions,
 }) {
   return createElement("section", {
     className: styles.recipe,
     children: [
-      createElement("h2", {
+      createElement("h1", {
+        className: styles.recipeName,
         innerText: strMeal,
-      }),
-      createElement("img", {
-        src: strMealThumb,
-        className: styles.recipeImage,
       }),
 
       createElement("section", {
@@ -55,6 +40,11 @@ export function createRecipeDetails({
           createElement("p", { innerText: `Category: ${strCategory}` }),
           createElement("p", { innerText: `Origin: ${strArea}` }),
         ],
+      }),
+
+      createElement("img", {
+        src: strMealThumb,
+        className: styles.recipeImage,
       }),
 
       createElement("ul", {
@@ -86,24 +76,6 @@ export function createRecipeDetails({
           }),
           createElement("li", {
             innerText: `${strMeasure9} ${strIngredient9}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure10} ${strIngredient10}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure11} ${strIngredient11}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure12} ${strIngredient12}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure13} ${strIngredient13}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure14} ${strIngredient14}`,
-          }),
-          createElement("li", {
-            innerText: `${strMeasure15} ${strIngredient15}`,
           }),
         ],
       }),

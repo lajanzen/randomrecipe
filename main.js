@@ -38,7 +38,7 @@ const mainElement = createElement("main", {
 
     createElement("h2", {
       className: "main__h2",
-      innerText: "You'll cook:",
+      innerText: "What about...",
     }),
 
     recipeSection,

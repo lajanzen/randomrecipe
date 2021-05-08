@@ -1,3 +1,11 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
 *,
 *::after,
 *::before {
@@ -5,11 +13,8 @@
 }
 
 :root {
-  --background-color: #cbf3f0;
-  --primary-color: #2ec4b6;
-  --secondary-color: #ffbf69;
-}
-
-.main {
-  background-color: #2ec4b6;
+  --background-color: #fff;
+  --primary-color: #e5e5e5;
+  --secondary-color: #fca311;
+  --tercary-color: #14213d;
 }
