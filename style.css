@@ -33,10 +33,21 @@ main {
   background-color: var(--primary-color);
   border-radius: 50px;
   padding: 1em;
+  display: grid;
+  gap: 1em;
 }
 
 .hero__title {
   font-size: 3em;
+}
+
+.hero__dropdown {
+  width: 150px;
+  justify-self: center;
+  border: none;
+  color: grey;
+  border-radius: 1em;
+  outline: none;
 }
 
 .hero__button {
@@ -45,8 +56,10 @@ main {
   font-weight: bold;
   font-size: 1.5em;
   padding: 1em;
+  width: 200px;
   border-radius: 100px;
   color: var(--background-color);
+  justify-self: center;
 }
 
 .hero__button:hover {

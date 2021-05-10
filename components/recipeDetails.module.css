@@ -45,8 +45,11 @@
 .recipeIngredients {
   text-align: left;
   place-self: center;
-  padding: 0 3em;
+  padding: 2em 3em;
   height: 100%;
+  display: grid;
+
+  /* place-content: center; */
   background-color: var(--secondary-color);
   border-radius: 1em;
 }
@@ -57,4 +60,5 @@
   margin: 2em 0;
   padding: 3em;
   border-radius: 50px;
+  line-height: 1.8em;
 }

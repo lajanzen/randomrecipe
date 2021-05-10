@@ -16,6 +16,41 @@ const mainElement = createElement("main", {
           className: "hero__title",
           innerText: "What the heck will I cook today?!",
         }),
+        createElement("select", {
+          className: "hero__dropdown",
+          id: "hero__dropdown",
+          children: [
+            createElement("option", {
+              innerText: "Any preference?",
+              value: "",
+            }),
+            createElement("option", {
+              innerText: "Vegan",
+              value: "Vegan",
+            }),
+            createElement("option", {
+              innerText: "Vegetarian",
+              value: "Vegetarian",
+            }),
+            createElement("option", {
+              innerText: "Chicken",
+              value: "Chicken",
+            }),
+            createElement("option", {
+              innerText: "Beef",
+              value: "Beef",
+            }),
+            createElement("option", {
+              innerText: "Breakfast",
+              value: "Breakfast",
+            }),
+            createElement("option", {
+              innerText: "Pasta",
+              value: "Pasta",
+            }),
+          ],
+        }),
+
         createElement("button", {
           className: "hero__button",
           innerText: "INSPIRE ME!",
@@ -23,6 +58,17 @@ const mainElement = createElement("main", {
             removeAllChildren(recipeSection); //löscht alle vorherigen Suchergebnisse
             getRecipes("chicken").then((recipes) => {
               // greift auf Recipe API zu
+
+              // folgender Filter funktioniert nicht gut, weil ich immer nur max 25 Rezepte bekomme
+              // console.log(recipes);
+              // const dropdownValue = document.querySelector("#hero__dropdown")
+              //   .value;
+
+              // const filteredRecipes = recipes.filter(
+              //   (category) => category.strCategory == dropdownValue
+              // );
+
+              // console.log(filteredRecipes);
 
               const shuffledRecipes = recipes
                 .sort(() => Math.random() - Math.random()) //mischt die Reihenfolge des Arrays
