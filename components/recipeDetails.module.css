@@ -48,8 +48,6 @@
   padding: 2em 3em;
   height: 100%;
   display: grid;
-
-  /* place-content: center; */
   background-color: var(--secondary-color);
   border-radius: 1em;
 }

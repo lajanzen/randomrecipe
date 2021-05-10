@@ -18,3 +18,15 @@
   --secondary-color: #fca311;
   --tercary-color: #14213d;
 }
+
+.main {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  padding: 1em;
+  margin: 0 3em 2em 3em;
+}

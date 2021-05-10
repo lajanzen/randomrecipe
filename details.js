@@ -9,11 +9,30 @@ const recipeId = params.get("id");
 
 getRecipe(recipeId).then((recipe) => {
   const recipeDetails = recipe.map(createRecipeDetails);
-  mainElement.append(...recipeDetails);
+  recipeSection.append(...recipeDetails);
+});
+
+const recipeSection = createElement("recipeSection", {
+  className: styles.recipeSection,
 });
 
 const mainElement = createElement("main", {
   className: styles.main,
+  children: [
+    recipeSection,
+
+    createElement("footer", {
+      className: styles.footer,
+      children: [
+        createElement("small", {
+          className: "footer__trademark",
+          children: [
+            createElement("span", { innerText: "Have fun cooking ♥" }),
+          ],
+        }),
+      ],
+    }),
+  ],
 });
 
 document.querySelector("#app").append(mainElement);
