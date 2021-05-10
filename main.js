@@ -8,6 +8,7 @@ const recipeSection = createElement("section", {
 });
 
 const mainElement = createElement("main", {
+  className: "main",
   children: [
     createElement("header", {
       className: "hero",

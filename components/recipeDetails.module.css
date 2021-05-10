@@ -55,8 +55,8 @@
 .recipeInstructions {
   grid-column: span 2;
   background-color: var(--primary-color);
-  margin: 2em 0;
-  padding: 3em;
+  margin: 2em 3em;
+  padding: 3em 5em;
   border-radius: 50px;
   line-height: 1.8em;
 }
